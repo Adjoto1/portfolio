@@ -26,6 +26,9 @@ class PortfolioApp extends StatelessWidget {
           new Text('Likes', style: new TextStyle(fontSize: 25.0)),
           new Icon(Icons.favorite, color: Colors.red,),
           new Text('100', style: new TextStyle(fontSize: 16.0),),
+          new Text('Notifications', style: new TextStyle(fontSize: 25.0)),
+          new Icon(Icons.notification_important, color: Colors.red,),
+          new Text('10', style: new TextStyle(fontSize: 16.0),),
         ],
       ),
     );
@@ -41,7 +44,7 @@ class PortfolioApp extends StatelessWidget {
         ],
       );
     }
-    Widget fourButtonsSection = new Container(
+    Widget fiveButtonsSection = new Container(
         child: new Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -49,6 +52,7 @@ class PortfolioApp extends StatelessWidget {
             buildButton(Icons.home, 'Home'),
             buildButton(Icons.arrow_back, 'Back'),
             buildButton(Icons.arrow_forward, 'Forward'),
+            buildButton(Icons.comment, 'Comment'),
             buildButton(Icons.share, 'Share'),
           ],
         )
@@ -67,6 +71,7 @@ class PortfolioApp extends StatelessWidget {
       home: new Scaffold(
           appBar: new AppBar(
             title: new Text('Portfolio App'),
+            centerTitle: true,
           ),
           body: new ListView(
             children: <Widget>[
@@ -75,7 +80,7 @@ class PortfolioApp extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               titleSection,
-              fourButtonsSection,
+              fiveButtonsSection,
               bottomTextSection
             ],
           )
